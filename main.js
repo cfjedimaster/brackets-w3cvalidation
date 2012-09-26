@@ -26,29 +26,30 @@ define(function (require, exports, module) {
         var text = editor.document.getText();
 
         $("#w3cvalidation .status").html("<p>Gathering results....</p>");
-        
+        $("#w3cvalidation .table-container").empty();
+
         W3CValidator.validate(text, function (res) {
             $("#w3cvalidation .status").html("");
-            console.dir(res.messages);
             messages = res.messages;
                     
             if (messages.length) {
 
-                var $w3cTable = $("<table class='zebra-striped condensed-table'>").append("<tbody>");
+                var $w3cTable = $("<table class='zebra-striped condensed-table' style='table-layout: fixed; width: 100%'>").append("<tbody>");
                 $("<tr><th>Line</th><th>Type</th><th>Explanation</th><th>Message</th></tr>").appendTo($w3cTable);
     
                 var $selectedRow;
                 
                 messages.forEach(function (item) {
                     var makeCell = function (content) {
-                        return $("<td/>").html(content);
+                        //second argument is a boolean to let you NOT escape html
+                        if (arguments.length == 2 && !arguments[1]) return $("<td style='word-wrap: break-word'/>").html(content);
+                        return $("<td style='word-wrap: break-word'/>").text(content);
                     };
-    
     
                     var $row = $("<tr/>")
                                 .append(makeCell(item.lastLine))
                                 .append(makeCell(item.type))
-                                .append(makeCell(item.explanation))
+                                .append(makeCell(item.explanation,false))
                                 .append(makeCell(item.message))
                                 .appendTo($w3cTable);
     

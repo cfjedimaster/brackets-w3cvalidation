@@ -6,6 +6,8 @@ When installed, you can enable W3CValidation by clicking 'Enable W3CValidation' 
 
 Issues/Updates
 =====
+[9/26/2012] Fixes some display issues.
+
 Currently it is performing a HTTP request on file edits. Not sure I like that.
 
 Credit
