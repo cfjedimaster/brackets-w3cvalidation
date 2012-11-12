@@ -6,6 +6,7 @@ When installed, you can enable W3CValidation by clicking 'Enable W3CValidation' 
 
 Issues/Updates
 =====
+[11/12/2012] Update code to properly insert the content over the status bar. Also made it resizable.  
 [9/26/2012] Fixes some display issues.
 
 Currently it is performing a HTTP request on file edits. Not sure I like that.

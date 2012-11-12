@@ -8,7 +8,8 @@ define(function (require, exports, module) {
         CommandManager          = brackets.getModule("command/CommandManager"),
         EditorManager           = brackets.getModule("editor/EditorManager"),
         DocumentManager         = brackets.getModule("document/DocumentManager"),
-        Menus                   = brackets.getModule("command/Menus");
+        Menus                   = brackets.getModule("command/Menus"),
+        Resizer                 = brackets.getModule("utils/Resizer");
 
     require('w3cvalidator');
     
@@ -104,13 +105,16 @@ define(function (require, exports, module) {
     function init() {
         
         //add the HTML UI
-        $('.content').append('  <div id="w3cvalidation" class="bottom-panel">'
+        var content =          '  <div id="w3cvalidation" class="bottom-panel">'
                              + '  <div class="toolbar simple-toolbar-layout">'
                              + '    <div class="title">W3CValidation</div><a href="#" class="close">&times;</a>'
                              + '  </div>'
                              + '  <div class="status"></div>'
                              + '  <div class="table-container"/>'
-                             + '</div>');
+                             + '</div>';
+
+        $(content).insertBefore("#status-bar");
+
         $('#w3cvalidation').hide();
         
         var menu = Menus.getMenu(Menus.AppMenuBar.VIEW_MENU);
@@ -119,6 +123,10 @@ define(function (require, exports, module) {
         $('#w3cvalidation .close').click(function () {
             CommandManager.execute(VIEW_HIDE_W3CVAL);
         });
+
+        // AppInit.htmlReady() has already executed before extensions are loaded
+        // so, for now, we need to call this ourself
+        Resizer.makeResizable($('#w3cvalidation').get(0), "vert", "top", 200);
 
     }
     
