@@ -47,13 +47,18 @@ define(function (require, exports, module) {
                         return $("<td style='word-wrap: break-word'/>").text(content);
                     };
     
+                    /*
+                    The feedback link in item.explanation needs to be nuked. 
+                    */
+                    var exp = item.explanation;
+                    exp = exp.replace(/<p class="helpwanted">(.|[\r\n])+?<\/p>/m,"");
                     var $row = $("<tr/>")
                                 .append(makeCell(item.lastLine))
                                 .append(makeCell(item.type))
-                                .append(makeCell(item.explanation,false))
+                                .append(makeCell(exp,false))
                                 .append(makeCell(item.message))
                                 .appendTo($w3cTable);
-    
+
                     $row.click(function () {
                         if ($selectedRow) {
                             $selectedRow.removeClass("selected");
@@ -127,6 +132,18 @@ define(function (require, exports, module) {
         // AppInit.htmlReady() has already executed before extensions are loaded
         // so, for now, we need to call this ourself
         Resizer.makeResizable($('#w3cvalidation').get(0), "vert", "top", 200);
+
+        //Lisyen for clicks
+        $(document).on("click", "#w3cvalidation a", function(e) {
+            var baseURL = 'http://validator.w3.org/';
+            var url = e.currentTarget.href;
+            //remove up to www
+            url = url.replace(/.*?www\//,"");
+            var newURL = baseURL + url;
+            window.open(newURL);
+//            console.dir(e);
+            return false;
+        });
 
     }
     

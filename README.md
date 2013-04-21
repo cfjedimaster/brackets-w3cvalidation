@@ -6,6 +6,7 @@ When installed, you can enable W3CValidation by clicking 'Enable W3CValidation' 
 
 Issues/Updates
 =====
+[4/21/2013] Remove links in explanation that just point to the 'add' function. Make links open in new window.
 [11/12/2012] Update code to properly insert the content over the status bar. Also made it resizable.  
 [9/26/2012] Fixes some display issues.
 
