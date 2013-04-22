@@ -9,7 +9,6 @@ var W3CValidator = (function() {
                 "fragment":str,
                 "output":"json"
             }, function(res,code) {
-             console.log("errr");
              cb(res);
             });
         }
