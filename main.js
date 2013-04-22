@@ -150,12 +150,10 @@ define(function (require, exports, module) {
             For some reason, some of the links are relative and end up being file://. Sniff for it.
             */
             var url = e.currentTarget.href;
-            console.log('orig url',url);
             if(url.indexOf("file://") === 0) {
                 //remove up to www
                 url = url.replace(/.*?www\//,"");
                 var newURL = baseURL + url;
-                console.log('newurl',newURL);
                 window.open(newURL);
             } else {
                 window.open(url);
