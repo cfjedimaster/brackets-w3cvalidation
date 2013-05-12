@@ -14,4 +14,4 @@ Currently it is performing a HTTP request on file edits. Not sure I like that.
 
 Credit
 =====
-As with the other extensions I built, it is iheavily based on the work of [Jonathan Rowny](http://www.jonathanrowny.com/). 
+As with the other extensions I built, it is heavily based on the work of [Jonathan Rowny](http://www.jonathanrowny.com/). 
