@@ -144,6 +144,10 @@ define(function (require, exports, module) {
 
         //Listen for clicks
         $(document).on("click", "#w3cvalidation a", function(e) {
+
+            if($(this).hasClass("close")) return;
+            e.preventDefault();
+
             var baseURL = 'http://validator.w3.org/';
 
             /*
@@ -158,7 +162,6 @@ define(function (require, exports, module) {
             } else {
                 window.open(url);
             }
-            return false;
         });
         
     }

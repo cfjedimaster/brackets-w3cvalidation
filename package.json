@@ -3,7 +3,7 @@
     "title": "W3CValidation",
     "description": "Adds W3C validation support to Brackets.",
     "homepage": "https://github.com/cfjedimaster/brackets-w3cvalidation",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "author": "Raymond Camden <raymondcamden@gmail.com> (http://www.raymondcamden.com)",
     "license": "MIT",
     "engines": {

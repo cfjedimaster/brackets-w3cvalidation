@@ -6,6 +6,9 @@ When installed, you can enable W3CValidation by clicking 'Enable W3CValidation' 
 
 Issues/Updates
 =====
+[10/3/2013] Fix bug where the close icon wasn't working. There is a new bug though - links in the results
+open a small window AND a Chrome tab.
+
 [5/24/2013] Set version to 2, added package.json support.
 
 [4/21/2013] Remove links in explanation that just point to the 'add' function. Make links open in new window.
