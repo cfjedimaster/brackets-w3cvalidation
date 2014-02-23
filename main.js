@@ -9,7 +9,9 @@ define(function (require, exports, module) {
         EditorManager           = brackets.getModule("editor/EditorManager"),
         DocumentManager         = brackets.getModule("document/DocumentManager"),
         Menus                   = brackets.getModule("command/Menus"),
-        Resizer                 = brackets.getModule("utils/Resizer");
+        PanelManager            = brackets.getModule("view/PanelManager"),
+        AppInit                 = brackets.getModule("utils/AppInit");
+
     
     require('w3cvalidator');
     
@@ -56,9 +58,12 @@ define(function (require, exports, module) {
                             return $("<td style='word-wrap: break-word'/>").text(content);
                         };
 
-                        var exp = item.explanation;
-                        exp = exp.replace(/<p class="helpwanted">(.|[\r\n])+?<\/p>/m,"");
-                        
+                        var exp = "";
+                        if(item.explanation) {
+                            exp = item.explanation;
+                            exp = exp.replace(/<p class="helpwanted">(.|[\r\n])+?<\/p>/m,"");
+                        }
+
                         var $row = $("<tr/>")
                             .append(makeCell(item.lastLine))
                             .append(makeCell(item.type))
@@ -116,7 +121,7 @@ define(function (require, exports, module) {
     
     CommandManager.register("Enable W3CValidation", VIEW_HIDE_W3CVAL, _handleShowW3CValidation);
     
-    function init() {
+    AppInit.appReady(function () {
         
         //add the HTML UI
         var content = '  <div id="w3cvalidation" class="bottom-panel">'
@@ -127,20 +132,16 @@ define(function (require, exports, module) {
                     + '  <div class="table-container"/>'
                     + '</div>';
         
-        $(content).insertBefore("#status-bar");
-        
-        $('#w3cvalidation').hide();
-        
+        var $content = $(content);
+      
         var menu = Menus.getMenu(Menus.AppMenuBar.VIEW_MENU);
-        menu.addMenuItem(VIEW_HIDE_W3CVAL, "", Menus.AFTER, "menu-view-sidebar");
+        menu.addMenuItem(VIEW_HIDE_W3CVAL, "", Menus.AFTER);
         
-        $('#w3cvalidation .close').click(function () {
+        $('.close', $content).click(function () {
             CommandManager.execute(VIEW_HIDE_W3CVAL);
         });
         
-        // AppInit.htmlReady() has already executed before extensions are loaded
-        // so, for now, we need to call this ourself
-        Resizer.makeResizable($('#w3cvalidation').get(0), "vert", "top", 200);
+        PanelManager.createBottomPanel('camden.w3cvalidation.panel', $content, 200);
 
         //Listen for clicks
         $(document).on("click", "#w3cvalidation a", function(e) {
@@ -158,14 +159,15 @@ define(function (require, exports, module) {
                 //remove up to www
                 url = url.replace(/.*?www\//,"");
                 var newURL = baseURL + url;
-                window.open(newURL);
+                //window.open(newURL);
+                brackets.app.openURLInDefaultBrowser(function (err) {}, newURL);
             } else {
-                window.open(url);
+                //window.open(url);
+                brackets.app.openURLInDefaultBrowser(function (err) {}, url);
             }
         });
         
-    }
+    });
     
-    init();
     
 });

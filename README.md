@@ -6,6 +6,8 @@ When installed, you can enable W3CValidation by clicking 'Enable W3CValidation' 
 
 Issues/Updates
 =====
+[2/23/2014] Fix bug 9 and another few things. Note that zebra striping isn't working anymore, but in theory, Sprint 37 will allow me to switch to the built in linting API and I won't have to care.
+
 [10/3/2013] Fix bug where the close icon wasn't working. There is a new bug though - links in the results
 open a small window AND a Chrome tab.
 
