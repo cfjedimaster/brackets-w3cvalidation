@@ -6,6 +6,8 @@ When installed, you can enable W3CValidation by clicking 'Enable W3CValidation' 
 
 Issues/Updates
 =====
+[5/19/2014] Removed an annoying console message.
+
 [4/15/2014] Requires Brackets Sprint 38. Supports sexy new async linting.
 
 [2/23/2014] Fix bug 9 and another few things. Note that zebra striping isn't working anymore, but in theory, Sprint 37 will allow me to switch to the built in linting API and I won't have to care.

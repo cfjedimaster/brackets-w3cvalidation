@@ -19,7 +19,7 @@ define(function (require, exports, module) {
 			if (messages.length) {
 									
 				messages.forEach(function (item) {
-					console.log('W3CValidation messsage ',item);
+					//console.log('W3CValidation messsage ',item);
 					var type = CodeInspection.Type.ERROR;
 					if (item.type === "warning") {
                         type = CodeInspection.Type.WARNING;
