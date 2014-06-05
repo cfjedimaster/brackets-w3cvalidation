@@ -1,8 +1,11 @@
 brackets-w3cvalidation
 =================
 
-A Brackets extension to enable W3C validation support. To install, place in your ```brackets/src/extensions/user``` folder.
-When installed, you can enable W3CValidation by clicking 'Enable W3CValidation' in your View menu.
+A Brackets extension to enable W3C validation support. To use this extension, 
+open any HTML file and then check the bottom right corner of Brackets 
+(where all files are checked) and look for either the green icon (all is well)
+or the yellow warning sign (issues). Clicking the icon will open a panel with
+the current issues.
 
 Issues/Updates
 =====
