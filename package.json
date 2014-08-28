@@ -5,7 +5,7 @@
     "homepage": "https://github.com/cfjedimaster/brackets-w3cvalidation",
     "keywords":["lint","linting","linter"],
     "categories":"linting",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "author": "Raymond Camden <raymondcamden@gmail.com> (http://www.raymondcamden.com)",
     "license": "MIT",
     "engines": {
