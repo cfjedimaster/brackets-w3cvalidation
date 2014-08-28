@@ -9,6 +9,8 @@ the current issues.
 
 Issues/Updates
 =====
+[8/28/2014] Added a submenu (under "Edit") to update the W3C validation (fixed bug when connection lost).
+
 [5/19/2014] Removed an annoying console message.
 
 [4/15/2014] Requires Brackets Sprint 38. Supports sexy new async linting.
