@@ -9,7 +9,7 @@ the current issues.
 
 Issues/Updates
 =====
-[8/28/2014] Added a submenu (under "Edit") to update the W3C validation (fixed bug when connection lost).
+[8/28/2014] Added a submenu (under "Edit") to update the W3C validation (fixed bug when connection lost). Credit goes to valx76 (https://github.com/cfjedimaster/brackets-w3cvalidation/pull/16)
 
 [5/19/2014] Removed an annoying console message.
 
