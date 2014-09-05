@@ -63,7 +63,7 @@ define(function (require, exports, module) {
     
     
     // Command
-    CommandManager.register(String.REFLESH_W3C_VALIDATION, COMMAND_ID, _refreshValidation);
+    CommandManager.register(String.REFRESH_W3C_VALIDATION, COMMAND_ID, _refreshValidation);
     
     // Menu
     var editMenu = Menus.getMenu(Menus.AppMenuBar.EDIT_MENU);
