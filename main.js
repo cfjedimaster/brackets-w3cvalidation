@@ -65,5 +65,5 @@ define(function (require, exports, module) {
     
     // Menu
     var editMenu = Menus.getMenu(Menus.AppMenuBar.EDIT_MENU);
-    editMenu.addMenuItem(COMMAND_ID);
+    editMenu.addMenuItem(COMMAND_ID, "F9");
 });
