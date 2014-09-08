@@ -12,6 +12,8 @@ define(function (require, exports, module) {
     
     var COMMAND_ID              = "w3cvalidator_refresh",
         PROVIDER_ID             = "W3CValidation";
+        
+    var Strings                 = require("strings");
     
     
     require('w3cvalidator');
@@ -61,7 +63,7 @@ define(function (require, exports, module) {
     
     
     // Command
-    CommandManager.register("Refresh W3C validation", COMMAND_ID, _refreshValidation);
+    CommandManager.register(Strings.REFRESH_W3C_VALIDATION, COMMAND_ID, _refreshValidation);
     
     // Menu
     var editMenu = Menus.getMenu(Menus.AppMenuBar.EDIT_MENU);

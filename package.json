@@ -8,6 +8,10 @@
     "version": "2.1.2",
     "author": "Raymond Camden <raymondcamden@gmail.com> (http://www.raymondcamden.com)",
     "license": "MIT",
+    "i18n": [
+        "en", 
+        "it" 
+    ],
     "engines": {
         "brackets": ">=0.38.0"
     }
