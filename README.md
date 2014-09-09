@@ -9,6 +9,9 @@ the current issues.
 
 Issues/Updates
 =====
+[9/9/2014] Two big updates by Denisov21. First, F9 can fire a re-scan. And then he added an 
+Italian language file. Go Italy!
+
 [8/28/2014] Added a submenu (under "Edit") to update the W3C validation (fixed bug when connection lost). Credit goes to valx76 (https://github.com/cfjedimaster/brackets-w3cvalidation/pull/16)
 
 [5/19/2014] Removed an annoying console message.
