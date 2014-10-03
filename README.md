@@ -9,6 +9,8 @@ the current issues.
 
 Issues/Updates
 =====
+[10/3/2014] German translatoin by danielkratz
+
 [9/9/2014] Two big updates by Denisov21. First, F9 can fire a re-scan. And then he added an 
 Italian language file. Go Italy!
 
