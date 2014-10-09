@@ -9,6 +9,8 @@ the current issues.
 
 Issues/Updates
 =====
+[10/9/2014] update package.json PR by @Denisov21
+
 [10/9/2014] Japanese translation by lclzd
 
 [10/3/2014] German translation by danielkratz
