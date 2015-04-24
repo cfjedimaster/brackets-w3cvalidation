@@ -9,6 +9,8 @@ the current issues.
 
 Issues/Updates
 =====
+[4/24/2015] Update strings
+
 [4/23/2015] Update keywords
 
 [10/9/2014] update package.json PR by @Denisov21
