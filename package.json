@@ -3,9 +3,9 @@
     "title": "W3CValidation",
     "description": "Adds W3C validation support to Brackets.",
     "homepage": "https://github.com/cfjedimaster/brackets-w3cvalidation",
-    "keywords":["lint","linting","linter"],
+    "keywords":["html","lint","linting","linter"],
     "categories":"linting",
-    "version": "2.1.6",
+    "version": "2.1.7",
     "author": "Raymond Camden <raymondcamden@gmail.com> (http://www.raymondcamden.com)",
     "license": "MIT",
     "i18n": [

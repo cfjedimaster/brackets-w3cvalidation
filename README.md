@@ -9,6 +9,8 @@ the current issues.
 
 Issues/Updates
 =====
+[4/23/2015] Update keywords
+
 [10/9/2014] update package.json PR by @Denisov21
 
 [10/9/2014] Japanese translation by lclzd
