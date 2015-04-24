@@ -27,5 +27,5 @@
 /*global define */
 
 define({
-    "REFRESH_W3C_VALIDATION"      : "Aggiorna validatore W3C"
+    "REFRESH_W3C_VALIDATION"      : "Aggiorna W3C Validation"
 });
