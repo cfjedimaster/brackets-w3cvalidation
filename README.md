@@ -9,6 +9,8 @@ the current issues.
 
 Issues/Updates
 =====
+[5/11/15] Chinese translation by https://github.com/lclzd.
+
 [4/24/2015] Update strings
 
 [4/23/2015] Update keywords
