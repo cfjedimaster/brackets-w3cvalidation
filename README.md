@@ -9,6 +9,7 @@ the current issues.
 
 Issues/Updates
 =====
+[6/20/15] New new service API.
 [6/8/15] New service API.
 
 [5/11/15] Chinese translation by https://github.com/lclzd.

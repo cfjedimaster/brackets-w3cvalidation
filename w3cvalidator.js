@@ -1,5 +1,5 @@
 var W3CValidator = (function() {
-    var W3CURL = "http://html5.validator.nu/?out=json";
+    var W3CURL = "https://validator.w3.org/nu/?out=json";
       
     return {
         validate:function(str,cb) {
