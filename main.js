@@ -33,11 +33,23 @@ define(function (require, exports, module) {
                     if (item.type === "warning")
                         type = CodeInspection.Type.WARNING;
                     
-                    result.errors.push({
-                        pos: {line:item.lastLine-1, ch:0},
-                        message:item.message,
-                        type:type
-                    });
+                    /*
+                    The new validator returns 2 info messages that look to be BS.
+                    They are:
+                        "The Content-Type was “text/html”. Using the HTML parser.
+                        "Using the schema for HTML with SVG 1.1, MathML 3.0, RDFa 1.1, and ITS 2.0 support."
+
+                    For now, we'll just delete them
+                    */
+                    if(item.message == 'The Content-Type was “text/html”. Using the HTML parser.' ||
+                       item.message == 'Using the schema for HTML with SVG 1.1, MathML 3.0, RDFa 1.1, and ITS 2.0 support.') {
+                    } else {
+                        result.errors.push({
+                            pos: {line:item.lastLine-1, ch:0},
+                            message:item.message,
+                            type:type
+                        });
+                    }
                     
                 });
             }

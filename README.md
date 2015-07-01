@@ -9,6 +9,9 @@ the current issues.
 
 Issues/Updates
 =====
+
+[7/1/15] It now hides the two default messages that are just noise. Warning - while testing a week or so ago, I was able to trip a security block on the w3 site that stopped all requests from my IP. I don't know exactly how it happened (there aren't any loops that could hit the API multiple times), but *something* caused it to throw a flag. I've investigated using the Jar locally, which would require doing the whole Brackets/Node thing, but I'm not sure that makes sense.
+
 [6/20/15] New new service API.
 [6/8/15] New service API.
 
