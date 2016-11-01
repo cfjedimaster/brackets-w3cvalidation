@@ -1,3 +1,9 @@
+README FIRST
+===============
+
+As of November 1, 2016, I've decided to remove my extension from the Brackets registry. Multiple users have found themselves banned from the w3c API because Brackets, for whatever reason, sends a large number of API requests. I was never able to figure out why. It could be my fault, it could be Brackets' fault. As I don't use, or recommend, Brackets anymore, I'm not really working on this extension. If someone wants to take a stab at fixing it, be my guest.
+
+
 brackets-w3cvalidation
 =================
 
