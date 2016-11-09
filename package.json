@@ -14,7 +14,8 @@
         "de",
         "ja",
         "zh-cn",
-        "zh-tw"
+        "zh-tw",
+        "tr"
     ],
     "engines": {
         "brackets": ">=0.38.0"
